@@ -22,15 +22,18 @@ int main() {
     int escolha;
     int validInput;
 
-    
-        menu();  
-        printf("Digite sua escolha (1-7): "); validInput = scanf("%d", &escolha);  
-        if (validInput != 1 || escolha < 1 || escolha > 7) { 
+        do{
+             menu();  
+             printf("Digite sua escolha (1-7): "); validInput = scanf("%d", &escolha);  
+        
 
             printf("Entrada inválida. Por favor, insira um número de 1 a 7.\n"); 
+            getchar();
 
             
-        }
+        
+        }while(validInput != 1 || escolha < 1 || escolha > 7);
+       
 
         // Processa a escolha do usuário
         switch (escolha) {
