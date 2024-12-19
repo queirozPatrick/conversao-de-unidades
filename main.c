@@ -24,7 +24,7 @@ void calculo_materiais(){
 };
 
 void conversoes_tempo(){
-    printf("A ser implementado por dev 8 -? ");
+    printf("A ser implementado por Andre ");
 }
 
 // Função que vai exibir o menu principal
