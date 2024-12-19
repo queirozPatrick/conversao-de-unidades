@@ -1,6 +1,7 @@
 /*Esse código se tornará uma biblioteca a ser adicionada no programa principal*/
 
 #include <stdio.h>
+#include <stdlib.h>
 
 
 // Função que vai exibir o menu principal
@@ -18,6 +19,8 @@ void menu() {
 } 
 
 int main() {
+
+    system("chcp 65001>null");
     int escolha;
     int validInput;
 
