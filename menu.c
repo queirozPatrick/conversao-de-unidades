@@ -22,15 +22,13 @@ int main() {
     int escolha;
     int validInput;
 
-    do { 
+    
         menu();  
         printf("Digite sua escolha (1-7): "); validInput = scanf("%d", &escolha);  
         if (validInput != 1 || escolha < 1 || escolha > 7) { 
 
             printf("Entrada inválida. Por favor, insira um número de 1 a 7.\n"); 
 
-            // Limpa o buffer de entrada 
-            while (getchar() != '\n'); continue; 
             
         }
 
@@ -60,7 +58,7 @@ int main() {
             default:
                 printf("Opção inválida. Tente novamente.\n");
         }
-    } while (escolha != 7);
+   
 
     return 0;
 }
