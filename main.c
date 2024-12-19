@@ -1,17 +1,52 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Funções para chamar cada modulo a ser implementado
+
+void conversoes_area(){
+    printf("A ser implementado por João");
+};
+
+void conversoes_volume(){
+    printf("A ser implementado por Ana");
+};
+
+void conversoes_comprimento(){
+    printf("A ser implementado por Garcia");
+}
+
+void conversoes_digitais(){
+    printf("A ser implementado por Josimar");    
+}
+
+void calculo_materiais(){
+    printf("A ser implementado por Alex");
+};
+
+void conversoes_tempo(){
+    printf("A ser implementado por dev 8 -? ");
+}
+
+
+// readme - dev 9  
+
+
+
+
+
+
+
 // Função que vai exibir o menu principal
 
 void menu() {
     printf("========== Conversão para Profissionais ==========\n");
 
-    // Código a ser implementado
+    // Código a ser implementadopelo Heitor
     
     printf("================ fim do menu ======================\n");
 }
 
-// Função principal
+// Função principal - A sr implementado por Patrick
 
 int main() {
     
