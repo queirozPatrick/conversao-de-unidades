@@ -4,6 +4,24 @@
 #include <stdlib.h>
 
 
+// Funções para chamar cada módulo a ser implementado.
+
+void conversoes_area(){
+    printf("A ser implementado por João");
+};
+
+void conversoes_volume(){
+    printf("A ser implementado por Ana");
+};
+
+void conversoes_comprimento(){
+    printf("A ser implementado por Garcia");
+}
+
+void conversoes_digitais(){
+    printf("A ser implementado por Josimar");    
+}
+
 // Função que vai exibir o menu principal
 void menu() { 
     printf("========== Conversão para Profissionais da Área de Engenharia ==========\n"); 
