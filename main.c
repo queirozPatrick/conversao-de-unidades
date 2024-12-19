@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Funções para chamar cada modulo a ser implementado
+// Funções para chamar cada módulo a ser implementado
 
 void conversoes_area(){
     printf("A ser implementado por João");
@@ -27,21 +27,12 @@ void conversoes_tempo(){
     printf("A ser implementado por dev 8 -? ");
 }
 
-
-// readme - dev 9  
-
-
-
-
-
-
-
 // Função que vai exibir o menu principal
 
 void menu() {
     printf("========== Conversão para Profissionais ==========\n");
 
-    // Código a ser implementadopelo Heitor
+    // Código a ser implementado pelo Heitor
     
     printf("================ fim do menu ======================\n");
 }
@@ -53,4 +44,4 @@ int main() {
     menu(); // Chama a função menu para exibir o menu principal
 
     return 0;
-}
+};
