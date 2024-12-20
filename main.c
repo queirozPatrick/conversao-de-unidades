@@ -1,28 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-// Funções para chamar cada módulo a ser implementado.
+// Funções para chamar cada módulo a ser implementado
 
 void conversoes_area(){
-    printf("A ser implementado por João");
+    // A ser implementado por João
 };
 
 void conversoes_volume(){
-    printf("A ser implementado por Ana");
+    // A ser implementado por Ana
 };
 
 void conversoes_comprimento(){
-    printf("A ser implementado por Garcia");
+    // A ser implementado por Juan
 }
 
 void conversoes_digitais(){
-    printf("A ser implementado por Josimar");    
+    // A ser implementado por Josimar    
+}
+
+void calculo_materiais(){
+    // A ser implementado por Alex
+};
+
+void conversoes_tempo(){
+    // A ser implementado por Andre
 }
 
 // Função que vai exibir o menu principal
 void menu() {
-    printf("========== Conversão para Profissionais da Área de Engenharia ==========\n");
+    printf("========== Conversões para Profissionais ==========\n");
     printf("Escolha uma das opções abaixo:\n");
     printf("1. Conversões de Área\n");
     printf("2. Conversões de Volume\n");
@@ -31,7 +38,7 @@ void menu() {
     printf("5. Cálculo de Materiais\n");
     printf("6. Conversões de Tempo\n");
     printf("7. Sair\n");
-    printf("================ fim do menu ======================\n");
+    printf("================ fim do menu ================\n");
 }
 
 int main() {
