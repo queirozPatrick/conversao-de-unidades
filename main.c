@@ -82,7 +82,6 @@ int main() {
                 printf("A ser implementado por Alex\n");
                 break;
             case 6:
-                //conversoes_tempo();
                 printf("A ser implementado por Andre\n");
                 break;
             case 7:
