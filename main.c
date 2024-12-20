@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Função para converter bits para bytes
+double convert_bits_to_bytes(long long bits) {
+    return bits / 8.0;
+}
+
+// Função para converter bytes para terabytes
+double convert_bytes_to_terabytes(long long bytes) {
+    return bytes / 1e12;
+}
+
 // Funções para chamar cada módulo a ser implementado
 
 void conversoes_area() {
@@ -16,9 +26,21 @@ void conversoes_comprimento() {
 }
 
 void conversoes_digitais() {
-    printf("A ser implementado por Josimar\n");
 
-    int teste;
+    long long bits, bytes;
+
+   
+    printf("Digite o número de bits: ");
+    scanf("%lld", &bits);
+    double bytes_result = convert_bits_to_bytes(bits);
+    printf("%lld bits equivalem a %.2f bytes.\n", bits, bytes_result);
+
+    // Exemplo: Converter bytes para terabytes
+    printf("Digite o número de bytes: ");
+    scanf("%lld", &bytes);
+    double terabytes_result = convert_bytes_to_terabytes(bytes);
+    printf("%lld bytes equivalem a %.12f terabytes.\n", bytes, terabytes_result);
+
 }
 
 void calculo_materiais() {
