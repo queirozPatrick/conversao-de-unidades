@@ -44,7 +44,7 @@ int main() {
         printf("Digite sua escolha (1-7): ");
         validInput = scanf("%d", &escolha);
 
-        // Limpa o buffer de entrada
+        
         while (getchar() != '\n');
 
         if (validInput != 1 || escolha < 1 || escolha > 7) {
