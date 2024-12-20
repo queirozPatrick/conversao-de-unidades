@@ -28,18 +28,16 @@ void conversoes_tempo(){
 }
 
 // Função que vai exibir o menu principal
+
 void menu() {
-    printf("========== Conversões para Profissionais ==========\n");
-    printf("Escolha uma das opções abaixo:\n");
-    printf("1. Conversões de Área\n");
-    printf("2. Conversões de Volume\n");
-    printf("3. Conversões de Comprimento\n");
-    printf("4. Conversões Digitais\n");
-    printf("5. Cálculo de Materiais\n");
-    printf("6. Conversões de Tempo\n");
-    printf("7. Sair\n");
-    printf("================ fim do menu ================\n");
+    printf("========== Conversão para Profissionais ==========\n");
+
+    // Código a ser implementado
+    
+    printf("================ fim do menu ======================\n");
 }
+
+// Função principal
 
 int main() {
     system("chcp 65001>null");  // Para garantir a codificação UTF-8 no Windows
