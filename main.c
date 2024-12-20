@@ -4,7 +4,11 @@
 // Funções para chamar cada módulo a ser implementado
 
 void conversoes_area(){
+  
     converteArea();
+
+    // A ser implementado por João
+
 };
 
 void conversoes_volume(){
@@ -19,9 +23,11 @@ void conversoes_digitais(){
     // A ser implementado por Josimar    
 }
 
+
 void calculo_materiais(){
     // A ser implementado por Alex
 };
+
 
 void conversoes_tempo(){
     // A ser implementado por Andre
@@ -62,8 +68,13 @@ int main() {
         // Processa a escolha do usuário
         switch (escolha) {
             case 1:
+
                 conversoes_area();
                 // printf("A ser implementado por João\n");
+
+                //conversoes_area();
+                printf("A ser implementado por João\n");
+
                 break;
             case 2:
                 //conversoes_volume();
@@ -189,3 +200,4 @@ float pol2_to_m2(float valor) {
 float m2_to_pol2(float valor){
     return valor * 1550.003;
 }
+
