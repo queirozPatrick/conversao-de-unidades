@@ -1,5 +1,4 @@
 /*Esse código se tornará uma biblioteca a ser adicionada no programa principal*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
