@@ -1,23 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Funções para chamar cada módulo a ser implementado
 
-// Funções para chamar cada módulo a ser implementado.
-
-void conversoes_area(){
-    printf("A ser implementado por João");
-};
-
-void conversoes_volume(){
-    printf("A ser implementado por Ana");
-};
-
-void conversoes_comprimento(){
-    printf("A ser implementado por Garcia");
+void conversoes_area() {
+    printf("A ser implementado por João\n");
 }
 
-void conversoes_digitais(){
-    printf("A ser implementado por Josimar");    
+void conversoes_volume() {
+    printf("A ser implementado por Ana\n");
+}
+
+void conversoes_comprimento() {
+    printf("A ser implementado por Garcia\n");
+}
+
+void conversoes_digitais() {
+    printf("A ser implementado por Josimar\n");
+}
+
+void calculo_materiais() {
+    printf("A ser implementado por Alex\n");
+}
+
+void conversoes_tempo() {
+    printf("A ser implementado por Andre\n");
 }
 
 // Função que vai exibir o menu principal
@@ -35,7 +42,9 @@ void menu() {
 }
 
 int main() {
-    system("chcp 65001>null");  // Para garantir a codificação UTF-8 no Windows
+
+    system("chcp 65001>null");
+   
     int escolha;
     int validInput;
 
@@ -47,10 +56,8 @@ int main() {
         // Limpa o buffer de entrada
         while (getchar() != '\n');
 
-        if (validInput != 1 || escolha < 1 || escolha > 7) {
-            printf("Entrada inválida. Por favor, insira um número de 1 a 7.\n");
-            continue;
-        }
+        }while(validInput != 1 || escolha < 1 || escolha > 7);
+
 
         // Processa a escolha do usuário
         switch (escolha) {
