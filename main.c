@@ -17,6 +17,8 @@ void conversoes_comprimento() {
 
 void conversoes_digitais() {
     printf("A ser implementado por Josimar\n");
+
+    int teste;
 }
 
 void calculo_materiais() {
