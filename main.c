@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Função para converter bits para bytes
+double convert_bits_to_bytes(long long bits) {
+    return bits / 8.0;
+};
+
+// Função para converter bytes para terabytes
+double convert_bytes_to_terabytes(long long bytes) {
+    return bytes / 1e12;
+};
+
 // Funções para chamar cada módulo a ser implementado
 
 void conversoes_area(){
@@ -13,11 +23,25 @@ void conversoes_volume(){
 
 void conversoes_comprimento(){
     // A ser implementado por Juan
-}
+};
 
-void conversoes_digitais(){
-    // A ser implementado por Josimar    
-}
+void conversoes_digitais() {
+
+    long long bits, bytes;
+
+   
+    printf("Digite o número de bits: ");
+    scanf("%lld", &bits);
+    double bytes_result = convert_bits_to_bytes(bits);
+    printf("%lld bits equivalem a %.2f bytes.\n", bits, bytes_result);
+
+    // Exemplo: Converter bytes para terabytes
+    printf("Digite o número de bytes: ");
+    scanf("%lld", &bytes);
+    double terabytes_result = convert_bytes_to_terabytes(bytes);
+    printf("%lld bytes equivalem a %.12f terabytes.\n", bytes, terabytes_result);
+
+};
 
 void calculo_materiais(){
     // A ser implementado por Alex
@@ -25,7 +49,7 @@ void calculo_materiais(){
 
 void conversoes_tempo(){
     // A ser implementado por Andre
-}
+};
 
 // Função que vai exibir o menu principal
 void menu() {
@@ -39,7 +63,7 @@ void menu() {
     printf("6. Conversões de Tempo\n");
     printf("7. Sair\n");
     printf("================ fim do menu ================\n");
-}
+};
 
 int main() {
     system("chcp 65001>null");  // Para garantir a codificação UTF-8 no Windows
@@ -74,11 +98,11 @@ int main() {
                 printf("A ser implementado por Garcia\n");
                 break;
             case 4:
-                //conversoes_digitais();
+                conversoes_digitais();
                 printf("A ser implementado por Josimar\n");
                 break;
             case 5:
-                //calculo_materiais();
+                calculo_materiais();
                 printf("A ser implementado por Alex\n");
                 break;
             case 6:
