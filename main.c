@@ -1,3 +1,5 @@
+/*Esse código se tornará uma biblioteca a ser adicionada no programa principal*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -24,22 +26,84 @@ void calculo_materiais(){
 };
 
 void conversoes_tempo(){
-    // A ser implementado por Andre
+    float num = 0;
+    int unidade = 0;
+    printf("Unidade inicial:\n ");
+    printf("Digite 1 para segundo, 2 para minuto, 3 para hora e 4 para dia:\n ");
+    scanf("%d",&unidade);
+    while (unidade<=0 && unidade > 4)
+    {
+        printf("valor inválido!\n");
+        scanf("%d",&unidade);
+    }
+    printf("Digite o valor do número: \n");
+    scanf("%f",&num);
+    switch (unidade) // converte valor de num para segundos.
+    {
+    case 1:
+        break;
+    case 2:
+        // Minutos
+        num = 60*num;
+        break;
+    case 3:
+        // horas
+        num = 3600*num;
+        break;
+    case 4:
+        // dias
+        num = 86400*num;
+        break;   
+    default:
+        break;
+    }
+    printf("Unidade final:\n ");
+    printf("Digite 1 para segundo, 2 para minuto, 3 para hora e 4 para dia:\n ");
+    scanf("%d",&unidade);
+    while (unidade<=0 && unidade > 4)
+    {
+        printf("valor inválido!\n");
+        scanf("%d",&unidade);
+    }
+    printf(" Resultado da conversão: \n");
+    switch (unidade)
+    {
+    case 1:
+        // Segundos
+        printf("%.2f segundos.\n", num);
+        break;
+    case 2:
+        // Minutos
+        num = num/60;
+        printf("%.2f minutos.\n", num);
+        break;
+    case 3:
+        // horas
+        num = num/3600;
+        printf("%.2f horas.\n", num);
+        break;
+    case 4:
+        // dias
+        num = num/86400;
+        printf("%.2f dias.\n", num);
+        break;   
+    default:
+    printf(" Erro inesperado! \n");
+        break;
+    }
 }
 
 // Função que vai exibir o menu principal
+
 void menu() {
-    printf("========== Conversões para Profissionais ==========\n");
-    printf("Escolha uma das opções abaixo:\n");
-    printf("1. Conversões de Área\n");
-    printf("2. Conversões de Volume\n");
-    printf("3. Conversões de Comprimento\n");
-    printf("4. Conversões Digitais\n");
-    printf("5. Cálculo de Materiais\n");
-    printf("6. Conversões de Tempo\n");
-    printf("7. Sair\n");
-    printf("================ fim do menu ================\n");
+    printf("========== Conversão para Profissionais ==========\n");
+
+    // Código a ser implementado
+    
+    printf("================ fim do menu ======================\n");
 }
+
+// Função principal
 
 int main() {
     system("chcp 65001>null");  // Para garantir a codificação UTF-8 no Windows
@@ -82,8 +146,7 @@ int main() {
                 printf("A ser implementado por Alex\n");
                 break;
             case 6:
-                //conversoes_tempo();
-                printf("A ser implementado por Andre\n");
+                conversoes_tempo();
                 break;
             case 7:
                 printf("Saindo do programa.\n");
