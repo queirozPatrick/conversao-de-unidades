@@ -14,12 +14,12 @@ As funcionalidades estão organizadas em módulos, correspondendo às opções d
 
   Como Utilizar:
 1. Compile o código com um compilador C, por exemplo:  
-   ```bash  
-   gcc -o conversoes conversoes.c  
+   ```gcc -o conversoes
+   conversoes.c  
    ```  
 2. Execute o programa:  
-   ```bash  
-   ./conversoes  
+   ```
+    ./conversoes  
    ```  
 3. Escolha uma das opções do menu e siga as instruções exibidas.  
 
@@ -74,7 +74,6 @@ Saída esperada: `1.0 TB`
 2. Inclua os testes dentro de uma função `main` específica para execução de testes.  
 3. Exemplos de saída serão exibidos no terminal ao rodar os testes.  
 
-Exemplo de Execução:
 Abaixo está um exemplo de execução do programa:  
 ```
 ========== Conversões para Profissionais ==========  
