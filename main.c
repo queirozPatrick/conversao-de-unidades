@@ -24,9 +24,9 @@ void conversoes_digitais(){
 }
 
 
-void calculo_materiais(){
-    // A ser implementado por Alex
-};
+//void calculo_materiais(){
+
+//};
 
 
 void conversoes_tempo(){
@@ -89,8 +89,8 @@ int main() {
                 printf("A ser implementado por Josimar\n");
                 break;
             case 5:
-                //calculo_materiais();
-                printf("A ser implementado por Alex\n");
+                calculo_materiais();
+                //printf("A ser implementado por Alex\n");
                 break;
             case 6:
                 //conversoes_tempo();
@@ -201,3 +201,87 @@ float m2_to_pol2(float valor){
     return valor * 1550.003;
 }
 
+void calculate_concrete_volume() {
+    float larguraPiso, comprimentoPiso, espessuraPiso, volumeConcreto;
+
+    printf("Informe a largura do piso (em metros): ");
+    scanf("%f", &larguraPiso);
+
+    printf("Informe o comprimento do piso (em metros): ");
+    scanf("%f", &comprimentoPiso);
+
+    printf("Informe a espessura do piso (em metros): ");
+    scanf("%f", &espessuraPiso);
+
+    volumeConcreto = larguraPiso * comprimentoPiso * espessuraPiso;
+    printf("\nSerá necessário %.2f m³ de concreto para o piso.\n\n", volumeConcreto);
+}
+
+float calcula_area(int quantidade){
+    float largura, comprimento,areaTotal=0;
+
+
+    for(int i = 0; i<quantidade; i++){
+        printf("Informe a %dª largura (em metros): ",i+1);
+        scanf("%f",&largura);
+        
+        printf("Informe o %dº comprimento (em metros): ",i+1);
+        scanf("%f",&comprimento);
+   
+        areaTotal+=largura*comprimento;
+        }
+    
+
+    return areaTotal;   
+
+}
+
+void calculate_blocks() {
+    float alturaParede, comprimentoParede, areaParede, areaPorta = 0, areaJanela = 0;
+    int quantidade;
+
+    printf("Informe a altura da parede (em metros): ");
+    scanf("%f", &alturaParede);
+
+    printf("Informe o comprimento ou perímetro de parede (em metros): ");
+    scanf("%f", &comprimentoParede);
+
+    areaParede = alturaParede * comprimentoParede;
+
+    printf("Quantas janelas há no projeto? ");
+    scanf("%d", &quantidade);
+    areaJanela = calcula_area(quantidade);
+
+    printf("Quantas portas há no projeto? ");
+    scanf("%d", &quantidade);
+    areaPorta = calcula_area(quantidade);
+
+    printf("\nSerá necessário aproximadamente %.2f m² de blocos.\n\n", areaParede - areaJanela - areaPorta);
+}
+
+void calculo_materiais() {
+    int escolha;
+
+    do {
+        printf("Deseja calcular material pra qual objetivo?\n 1. Volume de concreto necessário para piso.\n 2. Quantidade de blocos.\n 3. Voltar para o menu princinpal.\n");
+        scanf("%d", &escolha);
+
+    if(escolha==3){
+        break;
+    }
+    switch (escolha) {
+        case 1:
+            calculate_concrete_volume();
+            break;
+        case 2:
+            calculate_blocks();
+            break;
+        case 3:
+            menu();
+            break;
+        default:
+           printf("Opção inválida.\n\n");
+        }
+    } while (escolha==1||escolha==2);
+
+}
