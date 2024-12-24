@@ -19,10 +19,6 @@ Este projeto é destinado à conversão de diferentes unidades de medida.
     ```sh
     cd conversao-de-unidades
     ```
-3. Execute o programa:
-    ```sh
-    python main.py
-    ```
 
 ## Contribuição
 
@@ -44,7 +40,8 @@ Para contribuir com este projeto, siga os passos abaixo:
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a Licença MIT.
+
 Conversões para Profissionais  
 
 Este projeto em C implementa um sistema de conversões úteis para profissionais de diversas áreas. Ele fornece um menu interativo com funcionalidades como conversões de área, volume, comprimento, dados digitais, cálculos de materiais, e conversões de tempo.  
