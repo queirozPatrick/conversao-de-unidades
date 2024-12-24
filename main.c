@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h> 
 
 // Função para converter bits para bytes
 double convert_bits_to_bytes(long long bits) {
@@ -11,21 +12,7 @@ double convert_bytes_to_terabytes(long long bytes) {
     return bytes / 1e12;
 };
 
-// Funções para chamar cada módulo a ser implementado
-
-void conversoes_area(){
-    converteArea();
-
-};
-
-void conversoes_volume(){
-    // A ser implementado por Ana
-};
-
-void conversoes_comprimento(){
-    // A ser implementado por Juan
-};
-
+// Implementado por Josimar Souza
 void conversoes_digitais() {
 
     long long bits, bytes;
@@ -44,14 +31,7 @@ void conversoes_digitais() {
 
 };
 
-void calculo_materiais(){
-    // A ser implementado por Alex
-};
-
-void conversoes_tempo(){
-    // A ser implementado por Andre
-};
-
+// Implementado por Heitor Lemos
 // Função que vai exibir o menu principal
 void menu() {
     printf("========== Conversões para Profissionais ==========\n");
@@ -94,20 +74,16 @@ int main() {
                 printf("A ser implementado por Ana\n");
                 break;
             case 3:
-                //conversoes_comprimento();
-                printf("A ser implementado por Garcia\n");
+                run_conversion_program();
                 break;
             case 4:
                 conversoes_digitais();
-                printf("A ser implementado por Josimar\n");
                 break;
             case 5:
-                calculo_materiais();
-                printf("A ser implementado por Alex\n");
+                 calculo_materiais();
                 break;
             case 6:
-                //conversoes_tempo();
-                printf("A ser implementado por Andre\n");
+                conversoes_tempo();
                 break;
             case 7:
                 printf("Saindo do programa.\n");
@@ -120,8 +96,14 @@ int main() {
     return 0;
 }
 
-
+// Implementado por João Victor Paim
 // cabeçalhos
+
+void conversoes_area() {
+    // Função simples como placeholder (exemplo):
+    printf("Função de conversões de área ainda não implementada.\n");
+}
+
 void converteArea ();
 float cm2_to_m2 (float valor);
 float hectare_to_m2 (float valor);
@@ -212,4 +194,235 @@ float pol2_to_m2(float valor) {
 }
 float m2_to_pol2(float valor){
     return valor * 1550.003;
+};
+
+// Implementado por André Dutra da Silva
+void conversoes_tempo(){
+    float num = 0;
+    int unidade = 0;
+    printf("Unidade inicial:\n ");
+    printf("Digite 1 para segundo, 2 para minuto, 3 para hora e 4 para dia:\n ");
+    scanf("%d",&unidade);
+    while (unidade<=0 && unidade > 4)
+    {
+        printf("valor inválido!\n");
+        scanf("%d",&unidade);
+    }
+    printf("Digite o valor do número: \n");
+    scanf("%f",&num);
+    switch (unidade) // converte valor de num para segundos.
+    {
+    case 1:
+        break;
+    case 2:
+        // Minutos
+        num = 60*num;
+        break;
+    case 3:
+        // horas
+        num = 3600*num;
+        break;
+    case 4:
+        // dias
+        num = 86400*num;
+        break;   
+    default:
+        break;
+    }
+    printf("Unidade final:\n ");
+    printf("Digite 1 para segundo, 2 para minuto, 3 para hora e 4 para dia:\n ");
+    scanf("%d",&unidade);
+    while (unidade<=0 && unidade > 4)
+    {
+        printf("valor inválido!\n");
+        scanf("%d",&unidade);
+    }
+    printf(" Resultado da conversão: \n");
+    switch (unidade)
+    {
+    case 1:
+        // Segundos
+        printf("%.2f segundos.\n", num);
+        break;
+    case 2:
+        // Minutos
+        num = num/60;
+        printf("%.2f minutos.\n", num);
+        break;
+    case 3:
+        // horas
+        num = num/3600;
+        printf("%.2f horas.\n", num);
+        break;
+    case 4:
+        // dias
+        num = num/86400;
+        printf("%.2f dias.\n", num);
+        break;   
+    default:
+    printf(" Erro inesperado! \n");
+        break;
+    }
+};
+
+// Implementado por Alex dos Santos
+void calculate_concrete_volume() {
+    float larguraPiso, comprimentoPiso, espessuraPiso, volumeConcreto;
+
+    printf("Informe a largura do piso (em metros): ");
+    scanf("%f", &larguraPiso);
+
+    printf("Informe o comprimento do piso (em metros): ");
+    scanf("%f", &comprimentoPiso);
+
+    printf("Informe a espessura do piso (em metros): ");
+    scanf("%f", &espessuraPiso);
+
+    volumeConcreto = larguraPiso * comprimentoPiso * espessuraPiso;
+    printf("\nSerá necessário %.2f m³ de concreto para o piso.\n\n", volumeConcreto);
 }
+
+float calcula_area(int quantidade){
+    float largura, comprimento,areaTotal=0;
+
+
+    for(int i = 0; i<quantidade; i++){
+        printf("Informe a %dª largura (em metros): ",i+1);
+        scanf("%f",&largura);
+
+        printf("Informe o %dº comprimento (em metros): ",i+1);
+        scanf("%f",&comprimento);
+
+        areaTotal+=largura*comprimento;
+        }
+
+
+    return areaTotal;   
+
+}
+
+void calculate_blocks() {
+    float alturaParede, comprimentoParede, areaParede, areaPorta = 0, areaJanela = 0;
+    int quantidade;
+
+    printf("Informe a altura da parede (em metros): ");
+    scanf("%f", &alturaParede);
+
+    printf("Informe o comprimento ou perímetro de parede (em metros): ");
+    scanf("%f", &comprimentoParede);
+
+    areaParede = alturaParede * comprimentoParede;
+
+    printf("Quantas janelas há no projeto? ");
+    scanf("%d", &quantidade);
+    areaJanela = calcula_area(quantidade);
+
+    printf("Quantas portas há no projeto? ");
+    scanf("%d", &quantidade);
+    areaPorta = calcula_area(quantidade);
+
+    printf("\nSerá necessário aproximadamente %.2f m² de blocos.\n\n", areaParede - areaJanela - areaPorta);
+}
+
+void calculo_materiais() {
+    int escolha;
+
+    do {
+        printf("Deseja calcular material pra qual objetivo?\n 1. Volume de concreto necessário para piso.\n 2. Quantidade de blocos.\n 3. Voltar para o menu princinpal.\n");
+        scanf("%d", &escolha);
+
+    if(escolha==3){
+        break;
+    }
+    switch (escolha) {
+        case 1:
+            calculate_concrete_volume();
+            break;
+        case 2:
+            calculate_blocks();
+            break;
+        case 3:
+            menu();
+            break;
+        default:
+           printf("Opção inválida.\n\n");
+        }
+    } while (escolha==1||escolha==2);
+
+};
+
+// Implementado por Juan Garcia
+// Funcao para converter metros para centimetros
+
+double convert_meters_to_cm(double meters);
+double convert_meters_to_inches(double meters);
+double convert_cm_to_meters(double cm);
+double convert_inches_to_meters(double inches);
+
+// Função principal encapsulada
+void run_conversion_program() {
+    double value, converted_value;
+    char from_unit[20], to_unit[20];
+
+    printf("Bem-vindo ao conversor de medidas!\n");
+    printf("Unidades disponíveis: metros (m), centímetros (cm), polegadas (in)\n");
+
+    // Solicitar o valor a ser convertido
+    printf("Digite o valor a ser convertido: ");
+    scanf("%lf", &value);
+
+    // Solicitar a unidade fornecida
+    printf("Digite a unidade fornecida (m, cm, in): ");
+    scanf("%s", from_unit);
+
+    // Solicitar a unidade desejada
+    printf("Digite a unidade desejada (m, cm, in): ");
+    scanf("%s", to_unit);
+
+    // Converter de acordo com as unidades fornecidas
+    if (strcmp(from_unit, "m") == 0 && strcmp(to_unit, "cm") == 0) {
+        converted_value = convert_meters_to_cm(value);
+    } else if (strcmp(from_unit, "m") == 0 && strcmp(to_unit, "in") == 0) {
+        converted_value = convert_meters_to_inches(value);
+    } else if (strcmp(from_unit, "cm") == 0 && strcmp(to_unit, "m") == 0) {
+        converted_value = convert_cm_to_meters(value);
+    } else if (strcmp(from_unit, "cm") == 0 && strcmp(to_unit, "in") == 0) {
+        converted_value = convert_meters_to_inches(convert_cm_to_meters(value));
+    } else if (strcmp(from_unit, "in") == 0 && strcmp(to_unit, "m") == 0) {
+        converted_value = convert_inches_to_meters(value);
+    } else if (strcmp(from_unit, "in") == 0 && strcmp(to_unit, "cm") == 0) {
+        converted_value = convert_meters_to_cm(convert_inches_to_meters(value));
+    } else if (strcmp(from_unit, to_unit) == 0) {
+        converted_value = value;
+        printf("A unidade fornecida e a desejada são as mesmas. Nenhuma conversão necessária.\n");
+    } else {
+        printf("Unidades inválidas ou não suportadas.\n");
+        return;
+    }
+
+    // Exibir o resultado
+    printf("%.2f %s são %.2f %s.\n", value, from_unit, converted_value, to_unit);
+}
+
+int main2() {
+    // Chamar a função do programa principal
+    run_conversion_program();
+    return 0;
+}
+
+// Implementação das funções de conversão
+double convert_meters_to_cm(double meters) {
+    return meters * 100.0;
+}
+
+double convert_meters_to_inches(double meters) {
+    return meters * 39.3701;
+}
+
+double convert_cm_to_meters(double cm) {
+    return cm / 100.0;
+}
+
+double convert_inches_to_meters(double inches) {
+    return inches / 39.3701;
+};
