@@ -67,7 +67,7 @@ int main() {
         // Processa a escolha do usuário
         switch (escolha) {
             case 1:
-                conversoes_area();
+                converteArea();
                 break;
             case 2:
                 //conversoes_volume();
@@ -98,11 +98,6 @@ int main() {
 
 // Implementado por João Victor Paim
 // cabeçalhos
-
-void conversoes_area() {
-    // Função simples como placeholder (exemplo):
-    printf("Função de conversões de área ainda não implementada.\n");
-}
 
 void converteArea ();
 float cm2_to_m2 (float valor);
@@ -169,7 +164,7 @@ void converteArea (){
                 break;
         }
     }
-    printf("O valor convertido é %f \n", valorFinal);
+    printf("O valor convertido é %.10f \n", valorFinal);
 }
 float cm2_to_m2 (float valor){
     return valor / 1e4;
